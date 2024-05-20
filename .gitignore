@@ -1,0 +1,24 @@
+# Ignoruj foldery wirtualnego środowiska
+venv/
+ENV/
+env/
+
+# Ignoruj konfiguracje IDE
+.idea/
+
+# Ignoruj pliki konfiguracyjne systemu operacyjnego
+.DS_Store
+Thumbs.db
+
+# Ignoruj pliki kompilacji
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignoruj pliki logów
+*.log
+
+# Ignoruj pliki tymczasowe edytorów
+*.swp
+*.swo
