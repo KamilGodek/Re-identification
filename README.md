@@ -1,32 +1,41 @@
-## Re-identification
+# People Counter Project
 
+The People Counter project is an advanced system for counting people based on video footage from a camera. It utilizes the YOLO model for object detection, the SORT algorithm for tracking, and the SIFT algorithm for re-identification of individuals. The system tracks people in video frames, counts them, and saves snapshots of detected individuals.
 
+## Project Structure
 
-# Opis projektu
-Projekt People Counter to zaawansowany system do zliczania osób na podstawie materiału wideo z kamery. Wykorzystuje model YOLO do detekcji obiektów, algorytm SORT do śledzenia oraz algorytm SIFT do re-identyfikacji osób. System śledzi osoby w klatkach wideo, zlicza je, a także zapisuje zrzuty wykrytych osób.
+- **People_counter/People_counter.py**: Main script for counting people and re-identification.
+- **Pic_people/**: Directory where snapshots of detected individuals are stored.
 
-# Struktura projektu
-People_counter/People_counter.py: Główny skrypt realizujący zliczanie osób oraz re-identyfikację.
-Pic_people/: Katalog, w którym przechowywane są zrzuty wykrytych osób.
+## Requirements
 
-# Wymagania
-Python 3.8+
-OpenCV
-NumPy
-cvzone
-torch
-ultralytics (YOLO)
-sort
-glob
+- Python 3.8+
+- OpenCV
+- NumPy
+- cvzone
+- torch
+- ultralytics (YOLO)
+- sort
+- glob
 
+## Key Features
 
+- **extract_sift_features(image)**: Extracts SIFT features from an image.
+- **compare_sift_features(descriptors1, descriptors2)**: Compares SIFT features between two images.
+- **reidentify_people(image_path, output_folder)**: Re-identifies people based on SIFT features.
 
-# Kluczowe funkcje
-extract_sift_features(image): Ekstrakcja cech SIFT z obrazu.
-compare_sift_features(descriptors1, descriptors2): Porównywanie cech SIFT między dwoma obrazami.
-reidentify_people(image_path, output_folder): Re-identyfikacja osób na podstawie cech SIFT.
+## Additional Information
 
-# Informacje dodatkowe
-Skrypt automatycznie tworzy foldery dla zrzutów wykrytych osób.
-Używa GPU (CUDA) jeśli jest dostępne, w przeciwnym razie obliczenia są wykonywane na CPU.
-Wyświetla licznik osób przekraczających linie na ekranie wideo.
+- The script automatically creates folders for snapshots of detected individuals.
+- Uses GPU (CUDA) if available, otherwise, computations are performed on the CPU.
+- Displays the count of people crossing lines on the video screen.
+
+## Usage
+
+To run the project, ensure all dependencies are installed, and execute the main script:
+
+```bash
+python People_counter/People_counter.py
+```
+
+Make sure to update the paths for the YOLO model, video file, and other resources as per your setup. The script will process the video, detect, track, and re-identify people, and display the results in a window while saving snapshots in the specified directory.
