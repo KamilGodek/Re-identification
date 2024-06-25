@@ -39,3 +39,6 @@ python People_counter/People_counter.py
 ```
 
 Make sure to update the paths for the YOLO model, video file, and other resources as per your setup. The script will process the video, detect, track, and re-identify people, and display the results in a window while saving snapshots in the specified directory.
+
+
+![counter](https://github.com/KamilGodek/Projekt_SystemyWizyjne/assets/135075598/034cd398-d485-48fa-931d-4a497e6454a7)
